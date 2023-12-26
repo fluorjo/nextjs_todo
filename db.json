@@ -9,7 +9,7 @@
     {
       "userId": 2,
       "title": "study",
-      "completed": true,
+      "completed": false,
       "id": 4
     }
   ]

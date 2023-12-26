@@ -2,6 +2,7 @@
 
 import { Todo } from "@/app/components/TodoList";
 import { revalidatePath } from "next/cache";
+import sleep from "./sleep";
 
 export async function addTodo(data: FormData) {
   const title = data.get("title");
@@ -50,5 +51,7 @@ export async function updateTodo(todo: Todo) {
   });
 
   await res.json();
+  await sleep(50);
   revalidatePath("/");
 }
+
